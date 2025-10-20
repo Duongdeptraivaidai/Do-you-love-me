@@ -31,7 +31,7 @@ h1 { font-size: 2.5em; color: #333; margin-bottom: 40px; }
 .image-wrapper span { font-size: 1.5em; color: #a0522d; }
 
 button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     margin: 0 10px;
     border: none;
     border-radius: 10px;
@@ -45,7 +45,7 @@ button {
     color: white;
     position: absolute; 
     left: 100px;
-    top: 250px;
+    top: 300px;
 }
 
 .no-btn {
@@ -53,7 +53,7 @@ button {
     background-color: #ccc;
     color: #333;
     left: 280px;
-    top: 250px;
+    top: 300px;
     transition: all 0.1s ease-out;
 }
 
@@ -131,4 +131,5 @@ button {
     display: block;
     object-fit: cover; 
     border-radius: 10px; 
+
 }
