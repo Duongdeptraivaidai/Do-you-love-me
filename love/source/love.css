@@ -1,0 +1,134 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f7f0f6;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+
+.question-container {
+    position: relative;
+    min-height: 350px;
+    display: block; 
+}
+
+h1 { font-size: 2.5em; color: #333; margin-bottom: 40px; }
+.image-wrapper img { width: 150px; height: auto; border-radius: 10px; }
+.image-wrapper span { font-size: 1.5em; color: #a0522d; }
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.yes-btn {
+    background-color: #ff69b4;
+    color: white;
+    position: absolute; 
+    left: 100px;
+    top: 250px;
+}
+
+.no-btn {
+    position: absolute;
+    background-color: #ccc;
+    color: #333;
+    left: 280px;
+    top: 250px;
+    transition: all 0.1s ease-out;
+}
+
+#heartLoader {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background-color: #ff69b4;
+    transform: rotate(-45deg);
+    animation: rotate-spin 1.5s linear infinite, heart-beat 0.8s infinite alternate; 
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: inherit;
+}
+
+.heart::before { top: -50px; left: 0; }
+.heart::after { top: 0; right: -50px; }
+
+@keyframes rotate-spin {
+    0% { transform: rotate(-45deg); }
+    100% { transform: rotate(315deg); }
+}
+
+@keyframes heart-beat {
+    0% { transform: scale(1) rotate(-45deg); }
+    100% { transform: scale(1.1) rotate(-45deg); }
+}
+
+
+#resultContainer {
+    display: none; 
+    padding-top: 20px;
+    color: #ff69b4;
+    position: relative; 
+}
+
+#resultContainer h2 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.carousel-img {
+    min-width: 100%; 
+    height: auto;
+    display: block;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
